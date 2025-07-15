@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+// import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 type PaginationButtonProps = {
   currentPage: number;
@@ -24,7 +24,7 @@ export const PaginationButton = ({ currentPage, totalItems, setCurrentPage }: Pa
         disabled={isPrevButtonDisabled}
         onClick={() => setCurrentPage(currentPage - 1)}
       >
-        <ArrowLeftIcon className="h-4 w-4" />
+        {/* <ArrowLeftIcon className="h-4 w-4" /> */}
       </button>
       <span className="self-center text-primary-content font-medium">Page {currentPage + 1}</span>
       <button
@@ -32,7 +32,7 @@ export const PaginationButton = ({ currentPage, totalItems, setCurrentPage }: Pa
         disabled={isNextButtonDisabled}
         onClick={() => setCurrentPage(currentPage + 1)}
       >
-        <ArrowRightIcon className="h-4 w-4" />
+        {/* <ArrowRightIcon className="h-4 w-4" /> */}
       </button>
     </div>
   );
