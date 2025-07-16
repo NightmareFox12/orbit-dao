@@ -223,6 +223,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dimforge/rapier3d-compat@npm:~0.12.0":
+  version: 0.12.0
+  resolution: "@dimforge/rapier3d-compat@npm:0.12.0"
+  checksum: 86cb3b39925673761aa5dca5429ca44e0c7ac8072472cca925e2ca732be695292e318501a2ab39110be1549d4f143a0af0620246657f76570c8cdd1b0b3df36c
+  languageName: node
+  linkType: hard
+
 "@ecies/ciphers@npm:^0.2.3":
   version: 0.2.4
   resolution: "@ecies/ciphers@npm:0.2.4"
@@ -3942,6 +3949,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ~4.3.0
     "@types/node": ~18.19.50
     "@types/react": ~19.0.7
+    "@types/three": ^0
     "@uniswap/sdk-core": ~5.8.2
     "@uniswap/v2-sdk": ~4.6.1
     abitype: 1.0.6
@@ -3968,6 +3976,7 @@ __metadata:
     react-hot-toast: ~2.4.0
     tailwind-merge: ^3.3.1
     tailwindcss: 4.1.3
+    three: ^0.178.0
     tw-animate-css: ^1.3.5
     type-fest: ~4.26.1
     typescript: ~5.8.2
@@ -4451,6 +4460,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tweenjs/tween.js@npm:~23.1.3":
+  version: 23.1.3
+  resolution: "@tweenjs/tween.js@npm:23.1.3"
+  checksum: 2f8a908b275bb6729bde4b863c277bf7411d2e0302ceb0455369479077b89eaf8380cd9206b91ff574416418a95c6f06db4e1ddea732a286d0db0ba8e7c093d3
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:^0.10.0":
   version: 0.10.0
   resolution: "@tybys/wasm-util@npm:0.10.0"
@@ -4745,10 +4761,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/stats.js@npm:*":
+  version: 0.17.4
+  resolution: "@types/stats.js@npm:0.17.4"
+  checksum: 6f1a20e09da0c0b371b3c095b2787a91a9397944679aa506a0886160faf0ad185b911a34b4ec325f146810c5be969f085e81264e2dbe39fd57eb8ff98347b5f4
+  languageName: node
+  linkType: hard
+
+"@types/three@npm:^0":
+  version: 0.178.1
+  resolution: "@types/three@npm:0.178.1"
+  dependencies:
+    "@dimforge/rapier3d-compat": ~0.12.0
+    "@tweenjs/tween.js": ~23.1.3
+    "@types/stats.js": "*"
+    "@types/webxr": "*"
+    "@webgpu/types": "*"
+    fflate: ~0.8.2
+    meshoptimizer: ~0.18.1
+  checksum: 04441915b19592344ad45ad9bc3c4248edbdfee758e5f9bc816dc620236f2ae91330fba4c44fe90de8c19e9d64e0accf0bfde138ce70878b7f57a7dfe7d2536d
+  languageName: node
+  linkType: hard
+
 "@types/trusted-types@npm:^2.0.2":
   version: 2.0.7
   resolution: "@types/trusted-types@npm:2.0.7"
   checksum: 8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
+  languageName: node
+  linkType: hard
+
+"@types/webxr@npm:*":
+  version: 0.5.22
+  resolution: "@types/webxr@npm:0.5.22"
+  checksum: 063dc810937058526476a7f38c87779a0e4fa1d2483f82c3fc713c9ea0c0e404f47e4ba0b08a3279a152ce37f0effcc30c0457642d9fd558dd511d9ce3f6f727
   languageName: node
   linkType: hard
 
@@ -5894,6 +5939,13 @@ __metadata:
     multiformats: ^13.3.1
     uint8arrays: ^5.1.0
   checksum: 547d30007132bbfeaf3c0af608db05f2bda595525a269077d9b19add11e513e7d0290b2cea63db1e33dbf7eb919c99d71d448f83591a27786e3627c8cbf9d10f
+  languageName: node
+  linkType: hard
+
+"@webgpu/types@npm:*":
+  version: 0.1.64
+  resolution: "@webgpu/types@npm:0.1.64"
+  checksum: be482b7ca339c48d1c490f445eb9b086d3c8438b38dc4f719493488dbd07970d4c1f1aacf89e33ec3675ded0d19bc9fcc4ede4842e35513f742cf75fc1661d62
   languageName: node
   linkType: hard
 
@@ -9571,6 +9623,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fflate@npm:~0.8.2":
+  version: 0.8.2
+  resolution: "fflate@npm:0.8.2"
+  checksum: 29470337b85d3831826758e78f370e15cda3169c5cd4477c9b5eea2402261a74b2975bae816afabe1c15d21d98591e0d30a574f7103aa117bff60756fa3035d4
+  languageName: node
+  linkType: hard
+
 "figures@npm:^3.2.0":
   version: 3.2.0
   resolution: "figures@npm:3.2.0"
@@ -12572,6 +12631,13 @@ __metadata:
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
   checksum: 7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
+  languageName: node
+  linkType: hard
+
+"meshoptimizer@npm:~0.18.1":
+  version: 0.18.1
+  resolution: "meshoptimizer@npm:0.18.1"
+  checksum: 101dbed8abd4cf167cdb7a0bc13db90dd0743332c689e43b18cc5254d238f0766750752432401fa63dc7e9e32399ef68daacf48f0d89db1484042c1761c7362d
   languageName: node
   linkType: hard
 
@@ -16428,6 +16494,13 @@ __metadata:
   dependencies:
     real-require: ^0.1.0
   checksum: 0547795a8f357ba1ac0dba29c71f965182e29e21752951a04a7167515ee37524bfba6c410f31e65a01a8d3e5b93400b812889aa09523e38ce4d744c894ffa6c0
+  languageName: node
+  linkType: hard
+
+"three@npm:^0.178.0":
+  version: 0.178.0
+  resolution: "three@npm:0.178.0"
+  checksum: 027aa4d1a95bc664b7a92020eb9f7db76ecb679ff6fee6032b7f48a79b1774f9edd634fea9bdcfb763aa393f8ae7b3ffe0cbb6f9af77b65a78989d4f2146a06b
   languageName: node
   linkType: hard
 

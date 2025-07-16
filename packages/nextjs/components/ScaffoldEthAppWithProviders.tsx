@@ -22,11 +22,10 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <SidebarProvider>
+      <SidebarProvider defaultOpen={false}>
         <ScaffoldSidebar />
         <SidebarInset>
           <ScaffoldHeader />
-
           {children}
         </SidebarInset>
         {/* <main> */}
