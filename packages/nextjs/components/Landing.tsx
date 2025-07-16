@@ -15,7 +15,7 @@ export default function Landing() {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">DecentraApp</span>
+            <span className="text-xl font-bold text-white">OrbitDao</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#features" className="text-gray-300 hover:text-white transition-colors">
