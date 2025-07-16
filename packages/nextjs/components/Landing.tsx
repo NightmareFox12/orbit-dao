@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Coin3D from "./Coin3d";
 import { ArrowRight, Globe, Lock, Shield, TrendingUp, Users, Zap } from "lucide-react";
@@ -11,10 +12,13 @@ export default function Landing() {
       {/* Header */}
       <header className="border-b border-white/10 backdrop-blur-sm bg-black/20">
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+          <div className="flex items-center gap-2 justify-center">
+            <div className="relative w-8 h-8">
+              <Image src={"/favicon.png"} alt="orbit dao" fill={true} />
             </div>
+            {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              {/* <Zap className="w-5 h-5 text-white" /> */}
+            {/* </div>  */}
             <span className="text-xl font-bold text-white">OrbitDao</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
