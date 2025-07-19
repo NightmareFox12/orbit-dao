@@ -1,3 +1,4 @@
+import { menuLinks } from "./ScaffoldHeader";
 import {
   Sidebar,
   SidebarContent,
@@ -7,25 +8,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "./shadcn/ui/sidebar";
-import { BugIcon } from "lucide-react";
-
-type HeaderMenuLink = {
-  label: string;
-  href: string;
-  icon?: React.ReactNode;
-};
-
-export const menuLinks: HeaderMenuLink[] = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugIcon className="h-4 w-4" />,
-  },
-];
 
 export function ScaffoldSidebar() {
   return (

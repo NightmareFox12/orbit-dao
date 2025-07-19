@@ -2,11 +2,19 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { NextPage } from "next";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { cn } from "~~/lib/shadcn/utils";
 
-export default function Coin3d() {
+type Coin3DProps = {
+  coinName: "optimis" | "arbitrum";
+  className?: string;
+  appearanceRight?: boolean;
+};
+
+const Coin3d: NextPage<Coin3DProps> = ({ coinName, className, appearanceRight = false }) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -40,12 +48,12 @@ export default function Coin3d() {
 
     const loader = new GLTFLoader();
     loader.load(
-      "models/coin.glb",
+      `models/${coinName}.glb`,
       function (gltf) {
         gltf.scene.scale.set(0.3, 0.3, 0.3);
         gltf.scene.rotation.set(Math.PI / 2, THREE.MathUtils.degToRad(-90), 0);
         gltf.scene.position.y = -3;
-        gltf.scene.position.x = -3;
+        gltf.scene.position.x = appearanceRight ? -3 : 3;
 
         gltf.scene.traverse(function (child) {
           if (child instanceof THREE.Mesh) {
@@ -92,7 +100,9 @@ export default function Coin3d() {
       renderer.dispose();
       container?.removeChild(renderer.domElement);
     };
-  }, []);
+  }, [appearanceRight, coinName]);
 
-  return <div ref={mountRef} className="absolute bg-transparent left-0 top-0" />;
-}
+  return <div ref={mountRef} className={cn("absolute bg-transparent top-0", className)} />;
+};
+
+export default Coin3d;

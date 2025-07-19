@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~~/co
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <header className="border-b border-white/10 backdrop-blur-sm bg-black/20">
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
@@ -91,7 +91,8 @@ export default function Landing() {
           </div>
         </div>
 
-        <Coin3D />
+        <Coin3D coinName="optimis" className="left-0" appearanceRight={true} />
+        <Coin3D coinName="arbitrum" className="right-0" />
       </section>
 
       {/* Features Section */}
@@ -290,6 +291,6 @@ export default function Landing() {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }

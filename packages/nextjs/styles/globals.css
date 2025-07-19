@@ -163,8 +163,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  --color-primary: var(--primary);
 }
 
 /*
@@ -204,8 +202,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-  --primary: oklch(62.793% 0.25768 29.223);
 }
 
 /*
@@ -256,5 +252,13 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* MY CUSTOM CLASS  */
+  .bg-gradient {
+    @apply bg-gradient-to-bl from-purple-700 to-slate-700 text-white px-4 py-2 rounded hover:from-purple-700/80 hover:to-slate-700/80;
+  }
+  .bg-gradient-secondary {
+    @apply bg-gradient-to-bl from-purple-900 to-slate-900 text-white px-4 py-2 rounded hover:from-purple-900/80 hover:to-slate-900/80;
   }
 }

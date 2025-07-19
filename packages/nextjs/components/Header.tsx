@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { menuLinks } from "./ScaffoldSidebar";
+import { menuLinks } from "./ScaffoldHeader";
 import { BrainCircuit } from "lucide-react";
 import { hardhat } from "viem/chains";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
