@@ -1,10 +1,12 @@
 import { connectorsForWallets } from "@rainbow-me/rainbowkit";
 import {
   coinbaseWallet,
+  injectedWallet,
   ledgerWallet,
   metaMaskWallet,
-  rainbowWallet,
-  safeWallet,
+  oneInchWallet,
+  rabbyWallet,
+  trustWallet,
   walletConnectWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 import { rainbowkitBurnerWallet } from "burner-connector";
@@ -14,12 +16,14 @@ import scaffoldConfig from "~~/scaffold.config";
 const { onlyLocalBurnerWallet, targetNetworks } = scaffoldConfig;
 
 const wallets = [
+  oneInchWallet,
   metaMaskWallet,
   walletConnectWallet,
   ledgerWallet,
   coinbaseWallet,
-  rainbowWallet,
-  safeWallet,
+  injectedWallet,
+  rabbyWallet,
+  trustWallet,
   ...(!targetNetworks.some(network => network.id !== (chains.hardhat as chains.Chain).id) || !onlyLocalBurnerWallet
     ? [rainbowkitBurnerWallet]
     : []),
@@ -37,7 +41,7 @@ export const wagmiConnectors = connectorsForWallets(
   ],
 
   {
-    appName: "scaffold-eth-2",
+    appName: "swap-inbox",
     projectId: scaffoldConfig.walletConnectProjectId,
   },
 );

@@ -45,6 +45,7 @@ export default function Coin3d() {
         gltf.scene.scale.set(0.3, 0.3, 0.3);
         gltf.scene.rotation.set(Math.PI / 2, THREE.MathUtils.degToRad(-90), 0);
         gltf.scene.position.y = -3;
+        gltf.scene.position.x = -3;
 
         gltf.scene.traverse(function (child) {
           if (child instanceof THREE.Mesh) {
@@ -59,6 +60,7 @@ export default function Coin3d() {
 
         tl.to(gltf.scene.position, {
           y: 0,
+          x: 0,
           duration: 1.2,
           ease: "power2.out",
         });

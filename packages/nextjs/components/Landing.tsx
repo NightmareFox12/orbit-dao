@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Coin3D from "./Coin3d";
-import { ArrowRight, Globe, Lock, Shield, TrendingUp, Users, Zap } from "lucide-react";
-import { Badge } from "~~/components/shadcn/ui/badge";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ArrowRight, Lock, Shield, TrendingUp, Users, Wallet, Zap } from "lucide-react";
+// import { Badge } from "~~/components/shadcn/ui/badge";
 import { Button } from "~~/components/shadcn/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~~/components/shadcn/ui/card";
 
@@ -19,7 +20,7 @@ export default function Landing() {
             {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               {/* <Zap className="w-5 h-5 text-white" /> */}
             {/* </div>  */}
-            <span className="text-xl font-bold text-white">OrbitDao</span>
+            <span className="text-xl font-bold text-white">Swap Inbox</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#features" className="text-gray-300 hover:text-white transition-colors">
@@ -43,38 +44,49 @@ export default function Landing() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-3xl" />
         <div className="container mx-auto px-4 lg:px-6 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-purple-500/20 text-purple-300 border-purple-500/30">
+            {/* <Badge className="mb-6 bg-purple-500/20 text-purple-300 border-purple-500/30">
               🚀 Ahora en Beta - Únete a la revolución
-            </Badge>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              El Futuro es
+            </Badge> */}
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight lg:mx-16">
+              Exchange without thinking.
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {" "}
-                Descentralizado
+                Receive without limits.
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experimenta la próxima generación de aplicaciones web3. Sin intermediarios, sin censura, completamente en
-              tus manos.
+              Unleash the power of bridgeless swaps. A new way to receive crypto without limits or friction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
+              <ConnectButton.Custom>
+                {({ openConnectModal }) => {
+                  return (
+                    <Button
+                      onClick={openConnectModal}
+                      className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    >
+                      Connect Wallet
+                    </Button>
+                  );
+                }}
+              </ConnectButton.Custom>
+              {/* <Button
                 size="lg"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg"
               >
                 Comenzar Ahora
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
+              </Button> */}
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg bg-transparent"
               >
                 Ver Demo
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -86,7 +98,7 @@ export default function Landing() {
       <section id="features" className="py-20 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">¿Por qué elegir nuestra DApp?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why choose swap inbox?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Construida sobre tecnología blockchain de vanguardia para ofrecerte la mejor experiencia descentralizada
             </p>
@@ -108,11 +120,11 @@ export default function Landing() {
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Wallet className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl">Acceso Global</CardTitle>
+                <CardTitle className="text-white text-xl">Multiples wallets</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Disponible 24/7 desde cualquier lugar del mundo, sin restricciones geográficas
+                  Connecta con Metamask, oneInchWallet entre otras.
                 </CardDescription>
               </CardHeader>
             </Card>
